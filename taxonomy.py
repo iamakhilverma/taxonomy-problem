@@ -1,5 +1,4 @@
 #created by Akhil. Git username <iamakhilverma>
-
 import copy
 import string
 
@@ -27,7 +26,6 @@ visited = [False for i in range(numNodes)]
 answerList = []
 
 
-
 def dfs(node):
 	visited[node] = True
 	answer = 0
@@ -44,7 +42,6 @@ def dfs(node):
 # used as a comparator for sorting function
 def numChild(node):
 	return len(adj[node])	
-
 
 
 if __name__ == "__main__":
