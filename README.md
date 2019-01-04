@@ -1,5 +1,6 @@
 # TAXONOMY PROBLEM
-### The problem is given in the Taxonomy_Problem.pdf file. 
+
+The problem is given in the Taxonomy_Problem.pdf file. 
 
 ### How to write the input file:
 
