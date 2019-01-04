@@ -1,37 +1,18 @@
 # TAXONOMY PROBLEM
-## 1. Generate a classification report based on this taxonomy.
-1. Definition of taxonomy:
+### The problem is given in the Taxonomy_Problem.pdf file. 
 
-   A taxonomy consists of a set of terms organized in a hierarchical manner. Here we are dealing with a taxonomy of alphabets    that are organized as shown in Figure 1.
-2. List of reads classified into taxonomy levels:
+### How to write the input file:
 
-   We have a list of terms and a number of "reads" classified into each term. This will be used as the input file in our task
-   Classification of 1000 reads.   
-3. Task:
+1. Write 0, then shift by a horizontal tab, then provide the no. of nodes
+      where _no. of nodes is equal to the no. of taxonomy levels here_ 
+      
+2. Write 1, then shift by a horizontal tab, then provide the information on edge dependencies
+      which is _parent node, then shift by a horizontal tab, then child node_. Repeat this for all the childs in separate           lines. 
+      
+3. Write 2(or anything else other than 0 and 1), then shift by a horizontal tab, then provide the information on the nodes
+      where _information on nodes means the name of the node followed by the no. of reads with a horiztonal tab shift in             between._ 
 
-   |Taxonomy level ---|--- |---Number of reads
-   |G        ---   |  --- |--- 100|
-L               50
-N               50
-Y               300
-Z               250
-V               250
+   
+History: Previously, I wrote a code which had the taxonomical input hardcoded, but to make it tolerant to taxonomical variations, we have to modify the input file accordingly, hence we need to put <1> and <2> in the input file. 
 
-Write a program to generate a classification report given an input file with taxonomy level and number of reads separated by a tab.
-
->The classification report will show the total number of "reads" that fall under a certain term in the taxonomy. The number of "reads" under a terms has to be greater than 1 to be shown in the output. The terms must be ordered in the same order as the depth in the taxonomy.
-3.1 Example input file
-Z    100
-V    100
-X    200
-3.2 Example output
-A    400
-D    400
-G    400
-L    400
-Q    400
-T    400
-X    200
-V    200
-Z    100
-3
+Limitation: _We can't take more than 26 nodes in this form of code. We'll have to modify it_
