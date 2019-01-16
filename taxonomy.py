@@ -14,7 +14,7 @@ for line in content:
     	numNodes = int(v)
     	values = [0 for i in range(numNodes)]
     	adj = [[] for i in range(numNodes)]
-    elif line[0] == '1': # 1 command is for giving the information on edge dependencies
+    elif line[0] == '1': # 1 command is for giving the information on the edge dependencies
     	a, u, v = line.strip().split(' ')
     	adj[ord(u) - ord('A')].append(ord(v) - ord('A'))
     else: # this command is for giving the information on the value of nodes
@@ -31,7 +31,7 @@ def dfs(node):
 	answer = 0
 	tempadj = copy.deepcopy(adj[node]) #to not change the main adj list
 	tempadj.sort( key=numChild, reverse=True)
-	# print(tempadj)
+	# print(tempadj) 
 	for child in tempadj:
 		answer = answer + dfs(child)
 	answer = answer + values[node]
